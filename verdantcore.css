@@ -686,19 +686,19 @@ section[id] {
     }
 
     .header {
-        padding: 10px 0;
+        padding: 8px 0;
     }
 
     .nav {
         align-items: center;
         flex-direction: column;
-        gap: 10px;
+        gap: 6px;
     }
 
     .menu {
         width: 100%;
         flex-wrap: nowrap;
-        gap: 18px;
+        gap: 14px;
         overflow-x: auto;
         padding: 4px 0 8px;
         white-space: nowrap;
@@ -707,6 +707,7 @@ section[id] {
 
     .menu a {
         flex: 0 0 auto;
+        font-size: 12px;
     }
 
     section[id] {
@@ -714,19 +715,20 @@ section[id] {
     }
 
     .logo {
-        width: 145px;
+        width: 130px;
     }
 
     .hero h1 {
-        font-size: clamp(38px, 10vw, 44px);
-        letter-spacing: -1.5px;
+        font-size: clamp(34px, 9vw, 38px);
+        line-height: 1.05;
+        letter-spacing: -1px;
     }
 
     .eyebrow,
     .section-label {
-        font-size: 15px;
-        letter-spacing: 1.2px;
-        margin-bottom: 14px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
     }
 
     .intro h2,
@@ -734,7 +736,8 @@ section[id] {
     .values h2,
     .sectors h2,
     .cta h2 {
-        font-size: 16px;
+        font-size: clamp(24px, 6vw, 28px);
+        line-height: 1.2;
     }
 
     .section-heading.centered,
@@ -750,7 +753,8 @@ section[id] {
 
     .hero-description {
         font-size: 14px;
-        margin-bottom: 24px;
+        line-height: 1.65;
+        margin-bottom: 20px;
     }
 
     .hero {
@@ -758,7 +762,7 @@ section[id] {
     }
 
     .hero-content {
-        gap: 28px;
+        gap: 22px;
     }
 
     .hero-buttons {
@@ -783,11 +787,15 @@ section[id] {
 
     .service-grid,
     .values-list,
-    .sector-grid,
-    .testimonial-grid {
+    .sector-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        gap: 14px;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
     }
 
     .faq-grid {
@@ -796,12 +804,12 @@ section[id] {
 
     .section,
     .intro {
-        padding: 64px 0;
+        padding: 48px 0;
     }
 
     .section-heading {
-        gap: 18px;
-        margin-bottom: 34px;
+        gap: 14px;
+        margin-bottom: 26px;
     }
 
     .section-heading > p {
@@ -809,7 +817,7 @@ section[id] {
     }
 
     .intro-grid {
-        gap: 28px;
+        gap: 20px;
     }
 
     .values-grid {
@@ -824,7 +832,7 @@ section[id] {
         min-width: 0;
         grid-template-columns: 28px 1fr;
         gap: 8px;
-        padding: 16px 12px;
+        padding: 16px;
         border: 1px solid #dddddd;
         background: #ffffff;
     }
@@ -847,11 +855,11 @@ section[id] {
     .service-card {
         min-height: 0;
         min-width: 0;
-        padding: 18px 14px;
+        padding: 16px;
     }
 
     .service-number {
-        margin-bottom: 24px;
+        margin-bottom: 18px;
     }
 
     .service-icon {
@@ -874,7 +882,7 @@ section[id] {
     .sector-card {
         min-width: 0;
         min-height: 150px;
-        padding: 18px 14px;
+        padding: 16px;
     }
 
     .sector-card h3 {
@@ -888,7 +896,7 @@ section[id] {
 
     .testimonial-card {
         min-width: 0;
-        padding: 18px 14px;
+        padding: 20px;
     }
 
     .sample-label {
@@ -903,7 +911,7 @@ section[id] {
         min-height: 0;
         margin: 8px 0 16px;
         font-size: 14px;
-        line-height: 1.5;
+        line-height: 1.65;
     }
 
     .client-details {
@@ -911,7 +919,7 @@ section[id] {
     }
 
     .faq-item {
-        padding: 18px;
+        padding: 18px 20px;
     }
 
     .cta {
@@ -941,15 +949,12 @@ section[id] {
         gap: 20px;
     }
 
-    /* Keep every main section heading at the requested mobile size. */
-    .hero h1,
-    .intro h2,
-    .section-heading h2,
-    .values h2,
-    .sectors h2,
-    .cta h2,
-    .eyebrow,
-    .section-label {
-        font-size: 16px !important;
+    /* Give very narrow phones more room for card text. */
+    @media (max-width: 380px) {
+        .service-grid,
+        .values-list,
+        .sector-grid {
+            grid-template-columns: 1fr;
+        }
     }
 }
