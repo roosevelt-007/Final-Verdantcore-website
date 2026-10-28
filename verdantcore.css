@@ -667,7 +667,7 @@ section[id] {
 
 @media (max-width: 600px) {
     body {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .container {
@@ -707,8 +707,14 @@ section[id] {
     }
 
     .hero h1 {
-        font-size: clamp(32px, 9vw, 40px);
+        font-size: clamp(34px, 9vw, 38px);
         letter-spacing: -1.5px;
+    }
+
+    .eyebrow,
+    .section-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
     }
 
     .intro h2,
@@ -716,11 +722,11 @@ section[id] {
     .values h2,
     .sectors h2,
     .cta h2 {
-        font-size: clamp(28px, 8vw, 34px);
+        font-size: 30px;
     }
 
     .hero-description {
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 24px;
     }
 
@@ -753,13 +759,14 @@ section[id] {
     }
 
     .service-grid,
-    .sector-grid {
+    .values-list,
+    .sector-grid,
+    .testimonial-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
+        gap: 12px;
     }
 
-    .testimonial-grid,
     .faq-grid {
         grid-template-columns: 1fr;
     }
@@ -786,6 +793,34 @@ section[id] {
         gap: 34px;
     }
 
+    .values-list {
+        border-top: 0;
+    }
+
+    .value-item {
+        min-width: 0;
+        grid-template-columns: 28px 1fr;
+        gap: 8px;
+        padding: 16px 12px;
+        border: 1px solid #dddddd;
+        background: #ffffff;
+    }
+
+    .value-item > span {
+        font-size: 12px;
+    }
+
+    .value-item h3,
+    .service-card h3,
+    .sector-card h3 {
+        font-size: 16px;
+        line-height: 1.35;
+    }
+
+    .value-item p {
+        font-size: 14px;
+    }
+
     .service-card {
         min-height: 0;
         min-width: 0;
@@ -806,7 +841,7 @@ section[id] {
     }
 
     .service-card p {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .sector-grid {
@@ -825,16 +860,31 @@ section[id] {
     }
 
     .sector-card p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .testimonial-card {
-        padding: 24px;
+        min-width: 0;
+        padding: 18px 14px;
+    }
+
+    .sample-label {
+        font-size: 9px;
+    }
+
+    .quote-mark {
+        font-size: 34px;
     }
 
     .testimonial-card blockquote {
         min-height: 0;
-        margin: 8px 0 18px;
+        margin: 8px 0 16px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .client-details {
+        font-size: 12px;
     }
 
     .faq-item {
