@@ -666,6 +666,14 @@ section[id] {
 }
 
 @media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        width: 96%;
+    }
+
     .header {
         padding: 10px 0;
     }
@@ -699,12 +707,20 @@ section[id] {
     }
 
     .hero h1 {
-        font-size: clamp(38px, 11vw, 48px);
+        font-size: clamp(32px, 9vw, 40px);
         letter-spacing: -1.5px;
     }
 
+    .intro h2,
+    .section-heading h2,
+    .values h2,
+    .sectors h2,
+    .cta h2 {
+        font-size: clamp(28px, 8vw, 34px);
+    }
+
     .hero-description {
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 24px;
     }
 
@@ -713,7 +729,7 @@ section[id] {
     }
 
     .hero-content {
-        gap: 26px;
+        gap: 28px;
     }
 
     .hero-buttons {
@@ -738,8 +754,9 @@ section[id] {
 
     .service-grid,
     .sector-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
     }
 
     .testimonial-grid,
@@ -749,12 +766,12 @@ section[id] {
 
     .section,
     .intro {
-        padding: 56px 0;
+        padding: 64px 0;
     }
 
     .section-heading {
-        gap: 16px;
-        margin-bottom: 28px;
+        gap: 18px;
+        margin-bottom: 34px;
     }
 
     .section-heading > p {
@@ -771,19 +788,21 @@ section[id] {
 
     .service-card {
         min-height: 0;
-        padding: 16px;
+        min-width: 0;
+        padding: 18px 14px;
     }
 
     .service-number {
-        margin-bottom: 22px;
+        margin-bottom: 24px;
     }
 
     .service-icon {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .service-card h3 {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 1.3;
     }
 
     .service-card p {
@@ -795,12 +814,18 @@ section[id] {
     }
 
     .sector-card {
-        min-height: 160px;
-        padding: 16px;
+        min-width: 0;
+        min-height: 150px;
+        padding: 18px 14px;
     }
 
     .sector-card h3 {
-        margin-top: 28px;
+        margin-top: 26px;
+        font-size: 16px;
+    }
+
+    .sector-card p {
+        font-size: 12px;
     }
 
     .testimonial-card {
