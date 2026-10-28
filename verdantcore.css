@@ -639,6 +639,10 @@ section[id] {
         grid-template-columns: 1fr;
     }
 
+    .hero-content {
+        gap: 32px;
+    }
+
     .hero {
         padding: 8px 0 56px;
     }
@@ -662,30 +666,74 @@ section[id] {
 }
 
 @media (max-width: 600px) {
+    .header {
+        padding: 10px 0;
+    }
+
     .nav {
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
+        gap: 10px;
     }
 
     .menu {
         width: 100%;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        gap: 18px;
+        overflow-x: auto;
+        padding: 4px 0 8px;
+        white-space: nowrap;
+        scrollbar-width: thin;
+    }
+
+    .menu a {
+        flex: 0 0 auto;
+    }
+
+    section[id] {
+        scroll-margin-top: 120px;
     }
 
     .logo {
-        width: 155px;
+        width: 145px;
     }
 
     .hero h1 {
-        font-size: 50px;
+        font-size: clamp(38px, 11vw, 48px);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        margin-bottom: 24px;
     }
 
     .hero {
-        padding: 6px 0 45px;
+        padding: 6px 0 40px;
+    }
+
+    .hero-content {
+        gap: 26px;
+    }
+
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .hero-buttons .button {
+        padding: 12px 10px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .hero-buttons .button-whatsapp {
+        grid-column: 1 / -1;
     }
 
     .hero-visual {
-        height: 300px;
+        height: 230px;
     }
 
     .service-grid,
@@ -697,7 +745,84 @@ section[id] {
 
     .section,
     .intro {
-        padding: 90px 0;
+        padding: 56px 0;
     }
 
+    .section-heading {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .section-heading > p {
+        max-width: none;
+    }
+
+    .intro-grid {
+        gap: 28px;
+    }
+
+    .values-grid {
+        gap: 34px;
+    }
+
+    .service-card {
+        min-height: 0;
+        padding: 24px;
+    }
+
+    .service-number {
+        margin-bottom: 28px;
+    }
+
+    .sector-grid {
+        margin-top: 28px;
+    }
+
+    .sector-card {
+        min-height: 160px;
+    }
+
+    .sector-card h3 {
+        margin-top: 35px;
+    }
+
+    .testimonial-card {
+        padding: 24px;
+    }
+
+    .testimonial-card blockquote {
+        min-height: 0;
+        margin: 8px 0 18px;
+    }
+
+    .faq-item {
+        padding: 18px;
+    }
+
+    .cta {
+        padding: 56px 0;
+    }
+
+    .cta-inner {
+        gap: 24px;
+    }
+
+    .footer {
+        padding: 44px 0 18px;
+    }
+
+    .footer-content {
+        gap: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+    }
+
+    .footer-navigation {
+        gap: 20px;
+    }
 }
