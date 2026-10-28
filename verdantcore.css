@@ -447,11 +447,11 @@ section[id] {
 
 .centered {
     display: block;
-    text-align: center;
+    text-align: left;
 }
 
 .centered h2 {
-    margin: 0 auto;
+    margin: 0;
 }
 
 .sector-grid {
@@ -707,14 +707,15 @@ section[id] {
     }
 
     .hero h1 {
-        font-size: clamp(34px, 9vw, 38px);
+        font-size: clamp(38px, 10vw, 44px);
         letter-spacing: -1.5px;
     }
 
     .eyebrow,
     .section-label {
-        font-size: 11px;
-        letter-spacing: 1.5px;
+        font-size: 15px;
+        letter-spacing: 1.2px;
+        margin-bottom: 14px;
     }
 
     .intro h2,
@@ -722,7 +723,7 @@ section[id] {
     .values h2,
     .sectors h2,
     .cta h2 {
-        font-size: 30px;
+        font-size: clamp(32px, 8.5vw, 36px);
     }
 
     .hero-description {
