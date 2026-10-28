@@ -737,7 +737,11 @@ section[id] {
     }
 
     .service-grid,
-    .sector-grid,
+    .sector-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
     .testimonial-grid,
     .faq-grid {
         grid-template-columns: 1fr;
@@ -767,11 +771,23 @@ section[id] {
 
     .service-card {
         min-height: 0;
-        padding: 24px;
+        padding: 16px;
     }
 
     .service-number {
-        margin-bottom: 28px;
+        margin-bottom: 22px;
+    }
+
+    .service-icon {
+        font-size: 18px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 13px;
     }
 
     .sector-grid {
@@ -780,10 +796,11 @@ section[id] {
 
     .sector-card {
         min-height: 160px;
+        padding: 16px;
     }
 
     .sector-card h3 {
-        margin-top: 35px;
+        margin-top: 28px;
     }
 
     .testimonial-card {
