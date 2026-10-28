@@ -456,6 +456,11 @@ section[id] {
     text-align: left;
 }
 
+.section-heading.centered {
+    display: block;
+    width: 100%;
+}
+
 .centered h2 {
     margin: 0;
 }
@@ -719,7 +724,7 @@ section[id] {
 
     .eyebrow,
     .section-label {
-        font-size: 16px;
+        font-size: 15px;
         letter-spacing: 1.2px;
         margin-bottom: 14px;
     }
@@ -729,8 +734,7 @@ section[id] {
     .values h2,
     .sectors h2,
     .cta h2 {
-        font-size: clamp(36px, 9vw, 40px);
-        line-height: 1.08;
+        font-size: clamp(32px, 8.5vw, 36px);
     }
 
     .section-heading.centered,
