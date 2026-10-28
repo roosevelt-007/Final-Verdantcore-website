@@ -359,8 +359,9 @@ section[id] {
 
 .testimonials-intro {
     max-width: 600px;
-    margin: 18px auto 0;
+    margin: 18px 0 0;
     color: #666666;
+    text-align: left;
 }
 
 .testimonial-grid {
@@ -447,6 +448,11 @@ section[id] {
 
 .centered {
     display: block;
+    text-align: left;
+}
+
+.section-heading.centered,
+.section-heading.centered > * {
     text-align: left;
 }
 
@@ -713,7 +719,7 @@ section[id] {
 
     .eyebrow,
     .section-label {
-        font-size: 15px;
+        font-size: 16px;
         letter-spacing: 1.2px;
         margin-bottom: 14px;
     }
@@ -723,7 +729,19 @@ section[id] {
     .values h2,
     .sectors h2,
     .cta h2 {
-        font-size: clamp(32px, 8.5vw, 36px);
+        font-size: clamp(36px, 9vw, 40px);
+        line-height: 1.08;
+    }
+
+    .section-heading.centered,
+    .section-heading.centered > *,
+    .testimonials-intro {
+        text-align: left;
+    }
+
+    .testimonials-intro {
+        width: 100%;
+        margin: 18px 0 0;
     }
 
     .hero-description {
