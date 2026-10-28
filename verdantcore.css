@@ -734,7 +734,7 @@ section[id] {
     .values h2,
     .sectors h2,
     .cta h2 {
-        font-size: clamp(28px, 7.5vw, 32px);
+        font-size: 16px;
     }
 
     .section-heading.centered,
