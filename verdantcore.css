@@ -940,4 +940,16 @@ section[id] {
     .footer-navigation {
         gap: 20px;
     }
+
+    /* Keep every main section heading at the requested mobile size. */
+    .hero h1,
+    .intro h2,
+    .section-heading h2,
+    .values h2,
+    .sectors h2,
+    .cta h2,
+    .eyebrow,
+    .section-label {
+        font-size: 16px !important;
+    }
 }
