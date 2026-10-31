@@ -1060,26 +1060,44 @@ section[id] {
     }
 
     .testimonial-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .testimonial-card {
+        padding: 16px 14px;
+    }
+
+    .testimonial-card blockquote {
+        font-size: 13px;
     }
 
     .footer {
-        padding: 44px 0 18px;
+        padding: 32px 0 16px;
     }
 
     .footer-content {
-        gap: 30px;
-        padding-bottom: 30px;
+        gap: 22px;
+        padding-bottom: 22px;
     }
 
-    .footer-links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px 20px;
+    .footer-logo {
+        width: 160px;
+        margin-bottom: 12px;
     }
 
     .footer-navigation {
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        gap: 18px 16px;
+    }
+
+    .footer-links {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 16px;
     }
 
     /* Give very narrow phones more room for card text. */
