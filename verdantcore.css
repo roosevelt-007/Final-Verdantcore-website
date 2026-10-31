@@ -691,7 +691,7 @@ section[id] {
     }
 
     .nav {
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         gap: 6px;
     }
