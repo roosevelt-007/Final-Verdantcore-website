@@ -686,6 +686,11 @@ section[id] {
         width: 96%;
     }
 
+    .header .container {
+        width: 100%;
+        padding: 0;
+    }
+
     .header {
         padding: 8px 0;
     }
