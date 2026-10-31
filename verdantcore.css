@@ -701,6 +701,11 @@ section[id] {
         gap: 6px;
     }
 
+    .header .nav > .logo-link {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
     .menu {
         width: 100%;
         flex-wrap: nowrap;
