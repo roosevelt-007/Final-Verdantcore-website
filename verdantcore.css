@@ -1081,9 +1081,19 @@ section[id] {
         padding-bottom: 22px;
     }
 
+    .footer-content > div:first-child {
+        width: 100%;
+        text-align: left;
+    }
+
     .footer-logo {
-        width: 160px;
-        margin-bottom: 12px;
+        width: 140px;
+        margin: 0 0 10px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+        line-height: 1.5;
     }
 
     .footer-navigation {
@@ -1098,6 +1108,17 @@ section[id] {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 8px 16px;
+        font-size: 12px;
+    }
+
+    .operating-hours h3,
+    .footer-address h3 {
+        font-size: 13px;
+    }
+
+    .footer-address address,
+    .footer-phone {
+        font-size: 12px;
     }
 
     /* Give very narrow phones more room for card text. */
