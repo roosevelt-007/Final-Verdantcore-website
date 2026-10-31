@@ -350,6 +350,15 @@ section[id] {
     margin-bottom: 4px;
 }
 
+.value-icon,
+.sector-icon {
+    margin-right: 8px;
+}
+
+.value-icon {
+    color: #EA4200;
+}
+
 .value-item p {
     color: #666666;
     font-size: 14px;
@@ -497,6 +506,10 @@ section[id] {
 .sector-card h3 {
     margin-top: 55px;
     margin-bottom: 5px;
+}
+
+.sector-icon {
+    color: #FFB600;
 }
 
 .sector-card p {
@@ -758,8 +771,9 @@ section[id] {
     }
 
     .logo-link {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 1;
+        justify-self: start;
     }
 
     .mobile-menu-toggle {
