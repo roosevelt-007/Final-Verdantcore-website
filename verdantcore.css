@@ -696,14 +696,9 @@ section[id] {
     }
 
     .nav {
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         gap: 6px;
-    }
-
-    .header .nav > .logo-link {
-        align-self: flex-start;
-        margin-left: 0;
     }
 
     .menu {
@@ -805,7 +800,7 @@ section[id] {
     }
 
     .testimonial-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
     }
 
