@@ -704,16 +704,24 @@ section[id] {
     .menu {
         width: 100%;
         flex-wrap: nowrap;
-        gap: 14px;
+        gap: 10px;
         overflow-x: auto;
         padding: 4px 0 8px;
         white-space: nowrap;
         scrollbar-width: thin;
     }
 
+    .menu a[href="#home"] {
+        display: none;
+    }
+
     .menu a {
         flex: 0 0 auto;
         font-size: 12px;
+    }
+
+    .menu .nav-button {
+        padding: 6px 10px;
     }
 
     section[id] {
