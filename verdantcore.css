@@ -1088,7 +1088,7 @@ section[id] {
 
     .footer-logo {
         width: 140px;
-        margin: 0 0 10px;
+        margin: 0 0 10px -6px;
     }
 
     .footer-content p {
