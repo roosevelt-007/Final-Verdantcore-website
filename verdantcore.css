@@ -747,7 +747,7 @@ section[id] {
 
 @media (max-width: 600px) {
     body {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .container {
@@ -864,7 +864,7 @@ section[id] {
     }
 
     .hero-description {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.65;
         margin-bottom: 20px;
     }
@@ -963,7 +963,7 @@ section[id] {
     }
 
     .value-item p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .service-card {
@@ -986,7 +986,7 @@ section[id] {
     }
 
     .service-card p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .sector-grid {
@@ -1005,7 +1005,7 @@ section[id] {
     }
 
     .sector-card p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .testimonial-card {
@@ -1024,7 +1024,7 @@ section[id] {
     .testimonial-card blockquote {
         min-height: 0;
         margin: 8px 0 16px;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.65;
     }
 
@@ -1037,22 +1037,43 @@ section[id] {
     }
 
     .cta {
-        padding: 40px 0;
+        padding: 30px 0;
     }
 
     .cta-inner {
-        gap: 16px;
+        gap: 12px;
+    }
+
+    .cta-copy .section-label,
+    .cta-copy > p:not(.section-label) {
+        display: none;
+    }
+
+    .cta-copy h2 {
+        font-size: 22px;
+        line-height: 1.2;
+        margin-bottom: 0;
     }
 
     .quote-form {
         width: 100%;
         max-width: none;
         flex-basis: auto;
-        gap: 10px;
+        gap: 8px;
     }
 
     .quote-form h3 {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .quote-form label {
+        font-size: 12px;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+        padding: 8px 10px;
     }
 
     .quote-form-grid {
@@ -1070,7 +1091,7 @@ section[id] {
     }
 
     .testimonial-card blockquote {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .footer {
@@ -1093,6 +1114,7 @@ section[id] {
     }
 
     .footer-content p {
+        font-size: 12px;
         line-height: 1.5;
     }
 
@@ -1108,7 +1130,7 @@ section[id] {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 8px 16px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .operating-hours h3,
@@ -1118,7 +1140,11 @@ section[id] {
 
     .footer-address address,
     .footer-phone {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .footer-links .fa-instagram {
+        transform: translateX(-4px);
     }
 
     /* Give very narrow phones more room for card text. */
