@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5977f60a53.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="verdantcore.css?v=11">
+    <link rel="stylesheet" href="verdantcore.css?v=12">
 </head>
 <body>
 
@@ -22,7 +22,11 @@
                 <img src="Images/logo.png" alt="VerdantCore Facility Services" class="logo">
             </a>
 
-            <nav class="menu">
+            <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+                <span aria-hidden="true">☰</span> <span class="menu-label">Menu</span>
+            </button>
+
+            <nav class="menu" id="site-menu">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
                 <a href="#about">About</a>
@@ -356,6 +360,25 @@
     </footer>
 
     <script>
+        const menuButton = document.querySelector(".mobile-menu-toggle");
+        const siteMenu = document.getElementById("site-menu");
+        const menuLabel = menuButton.querySelector(".menu-label");
+
+        menuButton.addEventListener("click", function () {
+            const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+            menuButton.setAttribute("aria-expanded", String(!isOpen));
+            siteMenu.classList.toggle("is-open", !isOpen);
+            menuLabel.textContent = isOpen ? "Menu" : "Close";
+        });
+
+        siteMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                menuButton.setAttribute("aria-expanded", "false");
+                siteMenu.classList.remove("is-open");
+                menuLabel.textContent = "Menu";
+            });
+        });
+
         const quoteForm = document.getElementById("quote-form");
 
         quoteForm.addEventListener("submit", function (event) {
