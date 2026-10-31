@@ -1156,6 +1156,7 @@ section[id] {
     }
 
     .footer-links {
+        order: 0;
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1178,6 +1179,7 @@ section[id] {
     }
 
     .footer-phone {
+        order: 1;
         grid-column: 1;
     }
 
@@ -1186,10 +1188,16 @@ section[id] {
     }
 
     .footer-instagram {
+        order: 2;
         grid-column: 2;
         align-self: start;
         font-size: 13px;
-        color: #cbd0df;
+        color: #ffffff;
+    }
+
+    .operating-hours,
+    .footer-address {
+        order: 3;
     }
 
     .footer-instagram .footer-icon {
