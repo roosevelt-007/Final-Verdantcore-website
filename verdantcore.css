@@ -833,6 +833,7 @@ section[id] {
 
     .logo {
         width: 160px;
+        margin-left: -6px;
     }
 
     .hero h1 {
