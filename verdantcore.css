@@ -783,13 +783,13 @@ section[id] {
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        padding: 8px 10px;
+        padding: 9px 12px;
         border: 1px solid rgba(255, 255, 255, 0.45);
         border-radius: 4px;
         color: #ffffff;
         background: transparent;
         font: inherit;
-        font-size: 13px;
+        font-size: 14px;
         cursor: pointer;
     }
 
@@ -830,7 +830,7 @@ section[id] {
     }
 
     .logo {
-        width: 130px;
+        width: 150px;
     }
 
     .hero h1 {
