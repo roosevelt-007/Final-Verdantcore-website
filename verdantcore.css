@@ -721,7 +721,9 @@ section[id] {
     }
 
     .menu .nav-button {
+        flex-grow: 1;
         padding: 6px 10px;
+        text-align: center;
     }
 
     section[id] {
