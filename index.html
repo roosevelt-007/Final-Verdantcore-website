@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5977f60a53.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="verdantcore.css?v=9">
+    <link rel="stylesheet" href="verdantcore.css?v=11">
 </head>
 <body>
 
@@ -197,7 +197,6 @@
                 <div class="section-heading centered">
                     <p class="section-label">TESTIMONIALS</p>
                     <h2>What our clients say.</h2>
-                    <p class="testimonials-intro">Samplessssssssssssssssssss</p>
                 </div>
 
                 <div class="testimonial-grid">
@@ -269,7 +268,7 @@
 
                     <details class="faq-item">
                         <summary>How can I request a quote?</summary>
-                        <p>Call or WhatsApp us on <a href="tel:+233543083891">+233543083891</a>. Share your location and the services you need so we can discuss your request.</p>
+                        <p>Use the quote request form below to share your location and the services you need. It opens WhatsApp so you can send the details directly.</p>
                     </details>
                 </div>
             </div>
@@ -280,12 +279,40 @@
         ========================== -->
         <section class="cta" id="contact">
             <div class="container cta-inner">
-                <div>
+                <div class="cta-copy">
                     <p class="section-label light-label">LET'S WORK TOGETHER</p>
                     <h2>Let’s make your facility work better.</h2>
                     <p>Tell us what you need and let’s start a conversation.</p>
                 </div>
-                <a href="mailto:info@verdantcore.com" class="button button-white">Contact VerdantCore →</a>
+                <form class="quote-form" id="quote-form">
+                    <h3>Request a quote</h3>
+                    <div class="quote-form-grid">
+                        <label for="quote-name">Your name
+                            <input id="quote-name" name="name" type="text" autocomplete="name" required>
+                        </label>
+                        <label for="quote-phone">Phone number
+                            <input id="quote-phone" name="phone" type="tel" autocomplete="tel" required>
+                        </label>
+                        <label for="quote-service">Service needed
+                            <select id="quote-service" name="service" required>
+                                <option value="">Choose a service</option>
+                                <option>Cleaning &amp; Hygiene</option>
+                                <option>Maintenance &amp; Engineering</option>
+                                <option>Pest Control</option>
+                                <option>Facility Operations</option>
+                                <option>Other</option>
+                            </select>
+                        </label>
+                        <label for="quote-location">Property location
+                            <input id="quote-location" name="location" type="text" autocomplete="address-level2" required>
+                        </label>
+                    </div>
+                    <label for="quote-details">Anything else we should know? (optional)
+                        <textarea id="quote-details" name="details" rows="3"></textarea>
+                    </label>
+                    <button class="button button-white" type="submit">Continue in WhatsApp →</button>
+                    <p class="form-note">Your message opens in WhatsApp for you to review and send.</p>
+                </form>
             </div>
         </section>
     </main>
@@ -315,7 +342,7 @@
                 </div>
                 <div class="footer-address">
                     <h3><i class="fa-solid fa-location-dot footer-icon" aria-hidden="true"></i>Address</h3>
-                    <address>Oyarifa,<br>Greater Accra.</address>
+                    <address><a href="https://www.google.com/maps/search/?api=1&amp;query=Oyarifa%2C+Greater+Accra" target="_blank" rel="noopener noreferrer">Oyarifa,<br>Greater Accra.</a></address>
                 </div>
                 <div class="footer-phone">
                     <h3><i class="fa-solid fa-phone footer-icon" aria-hidden="true"></i>Phone</h3>
@@ -327,6 +354,27 @@
             <p>© 2026 VerdantCore Facility Services. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const quoteForm = document.getElementById("quote-form");
+
+        quoteForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(quoteForm);
+            const message = [
+                "Hello VerdantCore, I would like to request a quote.",
+                `Name: ${formData.get("name")}`,
+                `Phone: ${formData.get("phone")}`,
+                `Service: ${formData.get("service")}`,
+                `Location: ${formData.get("location")}`,
+                `Details: ${formData.get("details") || "Not provided"}`
+            ].join("\n");
+
+            const whatsappUrl = `https://wa.me/233543083891?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+        });
+    </script>
 
 </body>
 </html>
