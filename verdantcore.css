@@ -200,7 +200,7 @@ section[id] {
    INTRO
 ========================== */
 .intro {
-    padding: 100px 0;
+    padding: 56px 0;
 }
 
 .intro-grid {
@@ -237,7 +237,7 @@ section[id] {
    GENERAL SECTIONS
 ========================== */
 .section {
-    padding: 100px 0;
+    padding: 56px 0;
 }
 
 .services {
@@ -523,7 +523,7 @@ section[id] {
 .cta {
     background: #EA4200;
     color: #ffffff;
-    padding: 80px 0;
+    padding: 64px 0;
 }
 
 .cta-inner {
@@ -687,21 +687,24 @@ section[id] {
 }
 
 .footer-phone h3 {
-    margin: 0;
+    margin-bottom: 8px;
     font-size: 16px;
     color: #ffffff;
 }
 
-.footer-phone-heading {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 8px;
+.footer-instagram {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
-.footer-phone .footer-instagram {
-    font-size: 14px;
-    color: #cbd0df;
+.footer-instagram .footer-icon {
+    font-size: 18px;
+    color: #FFB600;
+}
+
+.footer-instagram a:hover {
+    color: #FFB600;
 }
 
 .footer-phone a:hover {
@@ -939,7 +942,7 @@ section[id] {
 
     .section,
     .intro {
-        padding: 48px 0;
+        padding: 30px 0;
     }
 
     .section-heading {
@@ -1175,23 +1178,30 @@ section[id] {
     }
 
     .footer-phone {
-        grid-column: 1 / -1;
-    }
-
-    .footer-phone-heading {
-        justify-content: space-between;
-        margin-bottom: 6px;
+        grid-column: 1;
     }
 
     .footer-phone h3 {
         color: #ffffff;
     }
 
-    .footer-phone .footer-instagram {
+    .footer-instagram {
+        grid-column: 2;
+        align-self: start;
         font-size: 13px;
+        color: #cbd0df;
+    }
+
+    .footer-instagram .footer-icon {
+        font-size: 13px;
+        color: #FFB600;
     }
 
     .footer-phone a:hover {
+        color: #cbd0df;
+    }
+
+    .footer-instagram a:hover {
         color: #cbd0df;
     }
 
