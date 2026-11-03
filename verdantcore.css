@@ -20,6 +20,12 @@ a {
     text-decoration: none;
 }
 
+/* Make keyboard focus easy to spot when moving through the page. */
+:focus-visible {
+    outline: 3px solid #FFB600;
+    outline-offset: 4px;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -36,8 +42,8 @@ img {
 ========================== */
 
 .header .container {
-    width: 96%;
-    max-width: none;
+    width: 94%;
+    max-width: 1440px;
 }
 
 .header {
@@ -61,6 +67,7 @@ section[id] {
 
 .logo {
     width: 170px;
+    margin-left: -7px;
 }
 
 .menu {
@@ -121,6 +128,12 @@ section[id] {
     line-height: 0.98;
     letter-spacing: -2px;
     margin-bottom: 25px;
+}
+
+@media (min-width: 901px) {
+    .hero h1 {
+        margin-left: -6px;
+    }
 }
 
 .hero h1 span {
@@ -187,6 +200,8 @@ section[id] {
     height: 450px;
     overflow: hidden;
     border-radius: 12px;
+    position: relative;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image {
@@ -194,6 +209,15 @@ section[id] {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: saturate(0.92) brightness(0.96);
+}
+
+.hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(145deg, rgba(5, 22, 76, 0.12), transparent 55%, rgba(234, 66, 0, 0.08));
 }
 
 /* =========================
@@ -272,11 +296,12 @@ section[id] {
     padding: 30px;
     min-height: 280px;
     border-top: 4px solid #05164C;
-    transition: transform 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(5, 22, 76, 0.1);
 }
 
 .featured-service {
@@ -368,7 +393,41 @@ section[id] {
    TESTIMONIALS
 ========================== */
 .testimonials {
-    background: #f4f5f7;
+    background: #ffffff;
+}
+
+.sector-card,
+.testimonial-card,
+.faq-item {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sector-card:hover,
+.testimonial-card:hover,
+.faq-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(5, 22, 76, 0.1);
+}
+
+.button,
+.nav-button {
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover,
+.nav-button:hover {
+    transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
 }
 
 .testimonial-grid {
@@ -421,8 +480,12 @@ section[id] {
     gap: 14px;
 }
 
-.faq-item {
+.faq {
     background: #f4f5f7;
+}
+
+.faq-item {
+    background: #ffffff;
     padding: 20px 24px;
     border-left: 4px solid #064331;
 }
@@ -607,7 +670,8 @@ section[id] {
 }
 
 .button-white:hover {
-    background: #FFB600;
+    background: #064331;
+    color: #ffffff;
 }
 
 /* =========================
@@ -728,6 +792,41 @@ section[id] {
 .copyright p {
     color: #9da6bf;
     font-size: 12px;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background: #EA4200;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(5, 22, 76, 0.22);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #05164C;
 }
 
 /* =========================
@@ -1205,6 +1304,14 @@ section[id] {
 
     .footer-instagram a:hover {
         color: #cbd0df;
+    }
+
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
     }
 
     /* Give very narrow phones more room for card text. */

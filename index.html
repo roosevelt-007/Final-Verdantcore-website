@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5977f60a53.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="verdantcore.css?v=41">
+    <link rel="stylesheet" href="verdantcore.css?v=48">
 </head>
 <body>
 
@@ -376,6 +376,10 @@
         </div>
     </footer>
 
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
     <script>
         const menuButton = document.querySelector(".mobile-menu-toggle");
         const siteMenu = document.getElementById("site-menu");
@@ -394,6 +398,17 @@
                 siteMenu.classList.remove("is-open");
                 menuLabel.textContent = "Menu";
             });
+        });
+
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", function () {
+            backToTopButton.classList.toggle("is-visible", window.scrollY > 500);
+        }, { passive: true });
+
+        backToTopButton.addEventListener("click", function () {
+            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
         });
 
         const quoteForm = document.getElementById("quote-form");
